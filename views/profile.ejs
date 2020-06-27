@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../assets/style/register.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <form action="" method="POST">
+        <h2><center>My Profile</center></h2>
+        <input type="hidden" name="id" value="<%= data.id %>">
+        <input type="text" name="username" id="username" class="username" placeholder="Username" value="<%= data.username %>">
+        <input type="email" name="email" id="email" class="email" placeholder="Email" value="<%= data.email %>" >
+        <input type="password" name="password" disabled id="password" class="password" placeholder="Password" value="<%= data.password %>" >
+        <label id="error"><%= typeof error !== 'undefined' ? error : '' %></label>
+        <div class="action">
+            <button type="submit" class="btn">Update</button>
+            <a href="/" class="btn">Back</a>
+        </div>
+    </form>
+</body>
+</html>

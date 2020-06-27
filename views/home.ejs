@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./assets/style/blog.css">
+    <base href="/">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <center><h1>Latest Post</h1></center>
+    <% data.forEach((item)=>{ %>
+        <div class="blog-div">
+            <div class="title-div">
+                <a href='/post/<%= item.id %>' class="title"><%= item.title  %></a>
+                <p class="date"> <i class="fa fa-calendar"></i> <%= new Date(item.date_uploaded).getDate()+'/'+(new Date(item.date_uploaded).getMonth()+1)+'/'+ new Date(item.date_uploaded).getFullYear() %></p>
+            </div>
+            <hr>
+            <div class="desc-div">
+                <p><%= (Array.from(item.desc).length > 200) ? item.desc.substring(0,200)+'...':item.desc %></p>
+                <div class="auther"><i class="fa fa-user"> <%= item.user[1] %></i></div>
+                <a href="/post/<%= item.id %>" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    <% }) %>
+</body>
+</html>

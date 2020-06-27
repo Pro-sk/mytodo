@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="../assets/style/register.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <form action="" method="POST">
+        <h2><center>Update Profile</center></h2>
+        <input type="text" name="username" id="username" class="username" placeholder="Username" required>
+        <input type="email" name="email" id="email" class="email" placeholder="Email" required>
+        <input type="password" name="password" id="password" class="password" placeholder="Password" required>
+        <label id="error"><%= typeof error !== 'undefined' ? error : '' %></label>
+        <div class="action">
+            <button type="submit" class="btn">Register</button>
+            <a href="/" class="btn">Back</a>
+        </div>
+        <center><a href="/user/login">already register? login here</a></center>
+    </form>
+</body>
+</html>

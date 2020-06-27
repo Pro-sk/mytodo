@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog</title>
+    <link rel="stylesheet" href="../assets/style/blog-form.css">
+    <base href="/">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <form action="" method="post">
+        <input type="text" name="title" id="title" placeholder="Title Here">
+        <textarea name="desc" id="desc" rows="20" placeholder="Description Here.."></textarea>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.blog-div{
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin:20px auto;
+    padding:20px;
+    font-family: monospace;
+    background: rgba(0,0,0,0);
+    box-shadow: 0px 0px 10px rgba(1,1,1,0.1);
+}
+.blog-div .title-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog-div .title-div .date{
+    padding:0;
+    margin:0;
+    color:#bbb;
+    font-size:15px;
+    font-family: monospace;
+}
+.blog-div .title-div .title{
+    text-decoration: none;
+    font-size: 20px;
+    color:#ce120b;
+    padding:0;
+    margin:0;
+    margin-right:20px;
+    text-transform: capitalize;
+}
+.blog-div .title-div .action a{
+    text-decoration: none;
+    color:#bbb;
+    font-size: 15px;
+}
+.blog-div .title-div .action .delete{
+    color:red;
+}
+.blog-div .title-div .action .edit{
+    color:green;
+}
+.blog-div hr{
+    border-color: rgba(1,1,1,0.1);
+}
+.blog-div .desc-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.blog-div .desc-div .auther{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 15px;
+    color:#bbb;
+    font-family: monospace;
+}
+.read-more{
+    text-decoration: none;
+    color:#bbb;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:900px) and (min-width:260px)
+{
+    .blog-div{
+        width: 95%;
+        margin:20px auto;
+        padding:10px;
+        font-family: monospace;
+        box-shadow: 0px 0px 10px rgba(1,1,1,0.1);
+    }
+    .blog-div .title-div .date{
+        font-size:13px;
+    }
+}
