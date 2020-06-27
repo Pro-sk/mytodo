@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const mongo = require('mongodb');
 const dotenv = require('dotenv/config');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 db = mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser: true,useUnifiedTopology: true },()=>console.log('connected'));
 
 
