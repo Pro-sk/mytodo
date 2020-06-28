@@ -14,14 +14,15 @@
             <div class="title-div">
                 <div style="display: flex;align-items: center;">
                     <p class="title"><%= item.title  %></p>
-                    <% if(item.user[0] == request.session.user['_id']){ %>
+                    <% if(request.session.user){ %>
+                        if(item.user[0] == request.session.user['_id']){ %>
                     
                     <div class="action">
                         <a href="/post/delete/<%= item.id %>" class="delete"><i class="fa fa-trash"></i></a>
                         <a href="/post/edit/<%= item.id %>" class="edit"><i class="fa fa-edit"></i></a>
                     </div>
                     
-                <% } %>
+                <% }} %>
                 </div>
                 <p class="date"> <i class="fa fa-calendar"></i> <%= new Date(item.date_uploaded).getDate()+'/'+(new Date(item.date_uploaded).getMonth()+1)+'/'+ new Date(item.date_uploaded).getFullYear() %></p>
             </div>
