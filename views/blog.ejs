@@ -15,7 +15,7 @@
                 <div style="display: flex;align-items: center;">
                     <p class="title"><%= item.title  %></p>
                     <% if(request.session.user){ %>
-                        if(item.user[0] == request.session.user['_id']){ %>
+                      <%  if(item.user[0] == request.session.user['_id']){ %>
                     
                     <div class="action">
                         <a href="/post/delete/<%= item.id %>" class="delete"><i class="fa fa-trash"></i></a>
